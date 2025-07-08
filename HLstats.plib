@@ -138,8 +138,8 @@ sub quoteSQL
     $varQuote =~ s/\\\\/\\/g;   # replace \\ with \
     $varQuote =~ s/\\'/'/g;     # replace \' with '
 
-    $varQuote =~ s/\\/\\\\/g;	# replace \ with \\
-    $varQuote =~ s/'/\\'/g;		# replace ' with \'
+    $varQuote =~ s/\\/\\\\/g;   # replace \ with \\
+    $varQuote =~ s/'/\\'/g;     # replace ' with \'
 	
     return $varQuote;
 }
