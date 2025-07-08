@@ -133,15 +133,15 @@ sub error
 
 sub quoteSQL
 {
-	my $varQuote = $_[0];
+    my $varQuote = $_[0];
 
     $varQuote =~ s/\\\\/\\/g;   # replace \\ with \
     $varQuote =~ s/\\'/'/g;     # replace \' with '
 
-	$varQuote =~ s/\\/\\\\/g;	# replace \ with \\
-	$varQuote =~ s/'/\\'/g;		# replace ' with \'
+    $varQuote =~ s/\\/\\\\/g;	# replace \ with \\
+    $varQuote =~ s/'/\\'/g;		# replace ' with \'
 	
-	return $varQuote;
+    return $varQuote;
 }
 
 #
