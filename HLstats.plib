@@ -135,6 +135,9 @@ sub quoteSQL
 {
 	my $varQuote = $_[0];
 
+    $varQuote =~ s/\\\\/\\/g;   # replace \\ with \
+    $varQuote =~ s/\\'/'/g;     # replace \' with '
+
 	$varQuote =~ s/\\/\\\\/g;	# replace \ with \\
 	$varQuote =~ s/'/\\'/g;		# replace ' with \'
 	
