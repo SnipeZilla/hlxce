@@ -42,7 +42,8 @@ This fork revives HLstatsX with full support for Source 2 and most importantly c
     - ApexCharts for sleek live graphs
     - Built-in caching and query optimization
     - All queries rewrote and optimized for large database
-    => Admin pages are not written yet! use ~legacy HLstatsX to setup games.
+    - ⚠️ Admin pages are not written yet! use ~legacy HLstatsX to setup games.
+    
 
 ## 💡 Why Choose HLstatsX:CE?
 - **HLstatsX is the best and most proven real-time ranking system**, and it's finally been brought into the CS2 era — fully async, extensible, and community-first.
