@@ -1064,7 +1064,7 @@ sub doEvent_Frag
 	my $victimstr = &getPlayerInfoString($victim, $victimId);
 	my $headshotFromAction = 0;
 
-	if (($g_servers{$s_addr}->{num_trackable_players} < $g_servers{$s_addr}->{minplayers}) && ($g_servers{$s_addr}->{broadcasting_events} == 1)) {
+	if ( ($g_servers{$s_addr}->{broadcasting_events} == 1) && ($g_servers{$s_addr}->{ignore_bots} == 1) && ((($killer->{is_bot} == 1) && ($victim->{is_bot} == 0)) || (($killer->{is_bot} == 0) && ($victim->{is_bot} == 1))) ) {
 		$desc = "(IGNORED) NOTMINPLAYERS: ";
         my $msg = "";
         my $k_name = getColor($killer->{name},$killer->{team});
