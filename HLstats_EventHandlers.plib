@@ -1470,18 +1470,6 @@ sub doEvent_PlayerPlayerAction
                 }
             }
 
-            if (defined($g_games{$g_servers{$s_addr}->{game}}{actions}{$action}) && $g_games{$g_servers{$s_addr}->{game}}{actions}{$action}{paction}) {
-                # Reroute PPAction that wants to be scored as a PAction
-                doEvent_PlayerAction(
-                    $playerId,
-                    $playerUniqueId,
-                    $action,
-                    $x,
-                    $y,
-                    $z
-                );
-            }
-            
             my $map = $g_servers{$s_addr}->get_map();
             if (defined($g_games{$g_servers{$s_addr}->{game}}{actions}{$map."_$action"}) && $g_games{$g_servers{$s_addr}->{game}}{actions}{$map."_$action"}{ppaction}) {
                 doEvent_PlayerPlayerAction(
