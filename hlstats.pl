@@ -3073,7 +3073,7 @@ sub handleData
                     if ( ($ev_daemontime - $player->{timestamp}) < 30 ) {
                         $_active = 1; # active player: no rcon
                     }
-                    if ($player->{is_bot} == 0 && $player->{ping} == 0) {
+                    if ( ($player->{is_bot} == 0 && $player->{ping} == 0) || !$player->{team} ) {
                         $_check = 1; # no ping: rcon
                         last;
                     }
